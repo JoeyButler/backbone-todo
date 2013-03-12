@@ -1,0 +1,35 @@
+<div id="wrapper">
+  <h1>To Do -></h1>
+
+  <% if flash[:notice].present? %>
+    <div id="notice">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
+  <% if flash[:error].present? %>
+    <div id="error">
+      <%= flash[:error] %>
+    </div>
+  <% end %>
+
+  <div id="container">
+    <ul id="tasks">
+      <% @tasks.each do |task| %>
+        <li>
+          <%= task.content %>
+          <span>
+            <%= link_to 'X', task_path(task), :confirm => 'Are you sure?', :method => :delete,
+                  :class => 'delete-task' %>
+          </span>
+        </li>
+      <% end %>
+    </ul>
+
+    <%= form_for @task do |form| %>
+      <%= @task.errors.full_messages.join('.') %>
+      <%= form.text_field :content %>
+      <%= form.submit 'Add' %>
+    <% end %>
+  </div>
+</div>

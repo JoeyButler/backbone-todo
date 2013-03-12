@@ -1,0 +1,79 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #DEDEDE;
+  color: #4E4E4E;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 390px;
+
+  h1 {
+    font-size: 43px;
+    margin-bottom: 3px;
+  }
+}
+
+#container {
+  background-color: #ffffff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #797979;
+  min-height: 482px;
+
+  ul#tasks {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+
+    li {
+      border-bottom: 1px solid #7B7B7B;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 21px 20px 21px 14px;
+
+      span {
+        float: right;
+
+        a.delete-task {
+          color: #870500;
+          text-align: right;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  form#new_task {
+    border-bottom: 1px solid #7B7B7B;
+    padding: 12px;
+
+    input[type=text] {
+      border: 1px solid #7B7B7B;
+      height: 22px;
+      width: 293px;
+    }
+
+    input[type=submit] {
+      background-color: #CCCCCC;
+      border: 1px solid #757575;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -khtml-border-radius: 10px;
+      border-radius: 10px;
+      color: #4E4E4E;
+      font-size: 13px;
+      font-weight: bold;
+      margin-left: 6px;
+      width: 54px;
+    }
+  }
+}
+
