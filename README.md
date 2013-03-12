@@ -1,7 +1,20 @@
-switch this to markdown
-explain how to setup the app
-remove files that aren't being used
+# Backbone.js To Do app
 
-# ToDos
-- mark tasks as complete
-- update the front end to use backbone.js
+Little ToDo app designed for testing out the backbone.js framework.
+
+## Install
+
+```
+bundle install
+rake db:create db:migrate # uses sqlite3
+rails server --port=3000
+open http://localhost:3000
+```
+
+## Next Items
+- add the ability to mark tasks as complete
+- update the front end to actually use backbone.js
+
+## License
+Typical MIT License. See the details in `LICENSE`.
+
